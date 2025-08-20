@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community - RH Integrated Farm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+  /* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f39c12;
+}
+
+/* WhatsApp button */
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #34495e;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo / Brand -->
+      <div class="brand">
+        <img src="IMG-20250819-WA0002.jpg" alt="Rimamnuskep Haggai" class="logo-img">
+        <div>
+          <h1>RH Integrated Farm</h1>
+        </div>
+      </div>
+
+      <!-- Hamburger menu (mobile only) -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="varieties.html" class="nav-link">Varieties</a>
+        <a href="community.html" class="nav-link active">Community</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </nav>
+
+      <!-- WhatsApp Button -->
+      <a class="btn btn-whatsapp" href="https://wa.me/2349030376207" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="highlight">
+      <h2>Community Development</h2>
+      <p>RH Integrated Farm is committed to community development, empowering youths, women, and local settlers through modern farming techniques and large market accessibility. Our initiatives foster economic growth, food security, and social stability.</p>
+      <div class="grid-2">
+        <div>
+          <h3>Training & Workshops</h3>
+          <p>Hands-on training on improved farming practices and post-harvest processing.</p>
+        </div>
+        <div>
+          <h3>Market Linkages</h3>
+          <p>Connecting farmers to buyers and processing firms to ensure fair prices.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <h3>RH Integrated Farm</h3>
+      </div>
+    </div>
+    <div class="copyright">© 2025 RH Integrated Farm</div>
+  </footer>
+
+  <!-- JavaScript for toggle -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("nav-open");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Varieties - RH Integrated Farm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+  /* -----------------
+ Global Styles
+------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* -----------------
+ Header
+------------------ */
+.site-header {
+  background: #1b4332;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Nav Menu */
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffd166;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #128C7E;
+}
+
+/* -----------------
+ Main Section
+------------------ */
+.highlight {
+  background: #fff;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.highlight h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1b4332;
+}
+
+.highlight p {
+  margin-bottom: 1rem;
+}
+
+.var-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.var-list li {
+  background: #e9f5ec;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.var-list li:hover {
+  background: #c7e9d2;
+  transform: translateY(-4px);
+}
+
+/* -----------------
+ Footer
+------------------ */
+.site-footer {
+  background: #1b4332;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.site-footer h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* -----------------
+ Animations
+------------------ */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* -----------------
+ Responsive Design
+------------------ */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Show menu toggle */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide nav by default */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #1b4332;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+
+  /* Show nav when toggled */
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-link, .btn-whatsapp {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .highlight h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn-whatsapp {
+    font-size: 13px;
+  }
+
+  .var-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/profile.svg" alt="Rimamnuskep Haggai" class="logo-img">
+        <div>
+          <h1>RH Integrated Farm</h1>
+        </div>
+      </div>
+
+      <!-- Hamburger Button -->
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="varieties.html" class="nav-link active">Varieties</a>
+        <a href="community.html" class="nav-link">Community</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/2349030376207" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="highlight">
+      <h2>Improved Cassava Varieties</h2>
+      <p>At RH Integrated Farm, we're committed to improving cassava varieties to enhance productivity and resilience. Some of the high-yielding and disease-resistant varieties we're working with include:</p>
+      <ul class="var-list big">
+        <li>TME 419</li>
+        <li>TMS 30572</li>
+        <li>TMS 98/0505</li>
+        <li>TMS 97/2205</li>
+        <li>TMS 01/1368</li>
+        <li>TMS 01/1371</li>
+        <li>TMS 92/0326</li>
+        <li>TMS 96/1089A</li>
+        <li>TMS 96/1414</li>
+        <li>TMS 97/4763</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <h3>RH Integrated Farm</h3>
+      </div>
+    </div>
+    <div class="copyright">© 2025 RH Integrated Farm</div>
+  </footer>
+
+  <!-- Script for toggle -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

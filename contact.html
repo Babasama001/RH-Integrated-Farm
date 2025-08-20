@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community & Contact - RH Integrated Farm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+/* --- Global Styles --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+h1, h2, h3 {
+  color: #28a745;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* --- Header --- */
+.site-header {
+  background: #fff;
+  border-bottom: 2px solid #28a745;
+  padding: 10px 0;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-img {
+  height: 50px;
+  margin-right: 10px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+.nav-link.active {
+  color: #28a745;
+}
+.btn-whatsapp {
+  background: #25D366;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Mobile Menu --- */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #28a745;
+}
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #28a745;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  .nav.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-link {
+    color: #fff;
+    padding: 8px 0;
+  }
+  .nav-link:hover {
+    color: #ffeb3b;
+  }
+}
+
+/* --- Section Styling --- */
+section {
+  margin: 40px 0;
+}
+.highlight {
+  background: #f8fff8;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+}
+
+/* --- Contact Grid --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+.contact-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.contact-card h3 {
+  margin-top: 0;
+  color: #28a745;
+}
+.socials a {
+  margin-right: 10px;
+  color: #28a745;
+  text-decoration: none;
+  font-weight: 500;
+}
+.socials a:hover {
+  color: #218838;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contact-form button {
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #218838;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background: #28a745;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="IMG-20250819-WA0002.jpg" alt="Rimamnuskep Haggai" class="logo-img">
+        <div>
+          <h1>RH Integrated Farm</h1>
+        </div>
+      </div>
+      
+      <!-- Menu Toggle (mobile) -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="varieties.html" class="nav-link">Varieties</a>
+        <a href="community.html" class="nav-link active">Community</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </nav>
+      
+      <a class="btn btn-whatsapp" href="https://wa.me/2349030376207" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Community Section -->
+    <section class="highlight">
+      <h2>Community Development</h2>
+      <p>
+        RH Integrated Farm is committed to <strong>empowering youths, women, and local settlers</strong> 
+        through modern farming techniques and large market accessibility.  
+        Our initiatives foster economic growth, food security, and social stability.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Training & Workshops</h3>
+          <p>We provide hands-on training on improved farming practices and post-harvest processing.</p>
+        </div>
+        <div class="contact-card">
+          <h3>Market Linkages</h3>
+          <p>We connect farmers to buyers and processing firms to ensure <strong>fair prices</strong> and sustained growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information + Form -->
+    <section>
+      <h2>Get in Touch</h2>
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-card">
+          <h3>Contact Information</h3>
+          <p><strong>Email:</strong> rhintegrated7@gmail.com</p>
+          <p><strong>Personal Email:</strong> haggaiaugustine7@gmail.com</p>
+          <p><strong>Phones:</strong> 09030376207 / 09154880185 / 08025770150</p>
+          <p><strong>Location:</strong> Wukari LGA, Taraba State, Nigeria</p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/rimamnuskep-haggai" target="_blank">LinkedIn</a> |
+            <a href="https://x.com/RIMAMNUSKEPHAG1?t=6pblNFQprtRqPbCclS3hIA&s=09" target="_blank">X</a> |
+            <a href="https://www.facebook.com/profile.php?id=61554749822752" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/haggairimamnuskep?igsh=aWZycm8wMHpxeDU5" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-card">
+          <h3>Send us a Message</h3>
+          <form class="contact-form" onsubmit="sendEmail(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+          <p class="muted">(Form will open your email app with pre-filled details.)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <h3>RH Integrated Farm</h3>
+      <p>Empowering communities through modern agriculture</p>
+    </div>
+    <div class="copyright">© 2025 RH Integrated Farm</div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById("menuToggle").addEventListener("click", function() {
+      document.getElementById("navMenu").classList.toggle("show");
+    });
+
+    // Contact form redirect to email
+    function sendEmail(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      
+      const subject = encodeURIComponent("New Contact from " + name);
+      const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+      
+      window.location.href = `mailto:rhintegrated7@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>

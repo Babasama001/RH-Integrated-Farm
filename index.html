@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RH Integrated Farm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<style>
+  /* Reset & global */
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family:'Poppins',sans-serif;color:#333;background:#f9f9f9;line-height:1.6;}
+.container {width:90%;max-width:1200px;margin:auto;}
+
+/* Header */
+.site-header {background:#1b4332;color:#fff;padding:1rem 0;position:sticky;top:0;z-index:1000;}
+.header-inner {display:flex;justify-content:space-between;align-items:center;}
+.brand {display:flex;align-items:center;gap:10px;}
+.logo-img {width:50px;height:50px;}
+.tag {font-size:0.8rem;color:#ffd166;}
+
+/* Nav */
+.menu-toggle {display:none;font-size:26px;cursor:pointer;color:#fff;}
+.nav {display:flex;gap:20px;align-items:center;}
+.nav-link {color:#fff;text-decoration:none;font-weight:500;transition:0.3s;}
+.nav-link:hover,.nav-link.active {color:#ffd166;}
+.btn-whatsapp {background:#25D366;color:#fff;padding:8px 15px;border-radius:25px;text-decoration:none;font-size:14px;}
+.btn-whatsapp:hover {background:#128C7E;}
+
+/* Hero */
+.hero {background:#f1f8f4;padding:2rem 0;}
+.hero-inner {display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2rem;}
+.hero-text h2 {font-size:1.8rem;margin-bottom:1rem;color:#1b4332;}
+.hero-text p {margin-bottom:1rem;}
+.cta-row {display:flex;gap:1rem;}
+.btn {padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:500;transition:0.3s;}
+.btn-primary {background:#1b4332;color:#fff;}
+.btn-primary:hover {background:#14532d;}
+.btn-outline {border:2px solid #1b4332;color:#1b4332;}
+.btn-outline:hover {background:#1b4332;color:#fff;}
+.hero-image img {width:100%;border-radius:15px;}
+
+/* Quick stats */
+.quick-stats {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:2rem 0;}
+.card {background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:transform 0.3s;}
+.card:hover {transform:translateY(-5px);}
+
+/* Varieties */
+.highlight {background:#fff;padding:2rem;margin:2rem 0;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.var-list {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:1rem 0;}
+.var-list li {background:#e9f5ec;padding:10px;text-align:center;border-radius:8px;font-weight:500;transition:0.3s;}
+.var-list li:hover {background:#c7e9d2;transform:scale(1.05);}
+.muted {font-size:0.85rem;color:#666;}
+
+/* Gallery */
+.gallery {margin:2rem 0;}
+.gallery .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;}
+.gallery img {width:100%;border-radius:10px;transition:0.3s;}
+.gallery img:hover {transform:scale(1.05);box-shadow:0 6px 15px rgba(0,0,0,0.2);}
+
+/* Footer */
+.site-footer {background:#1b4332;color:#fff;padding:2rem 0;margin-top:3rem;}
+.footer-inner {display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.socials a {color:#ffd166;margin-right:10px;text-decoration:none;}
+.socials a:hover {text-decoration:underline;}
+.footer-contact h4 {margin-bottom:0.5rem;}
+.footer-about p,.footer-contact p {font-size:0.9rem;}
+@media(max-width:768px){
+  .header-inner{flex-wrap:wrap;}
+  .menu-toggle{display:block;}
+  .nav{display:none;flex-direction:column;background:#1b4332;width:100%;margin-top:10px;padding:10px 0;border-radius:10px;}
+  .nav.show{display:flex;}
+  .nav-link,.btn-whatsapp{padding:10px;text-align:center;width:100%;}
+  .hero-inner{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .hero-text h2{font-size:1.3rem;}
+  .logo-img{width:40px;height:40px;}
+}
+
+/* Animations */
+.fade-in {opacity:0;transform:translateY(20px);transition:opacity 0.8s,transform 0.8s;}
+.fade-in.visible {opacity:1;transform:translateY(0);}
+
+</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="IMG-20250819-WA0002.jpg" alt="Rimamnuskep Haggai" class="logo-img">
+        <div>
+          <h1>RH Integrated Farm</h1>
+          <p class="tag">Empowering Communities through Sustainable Cassava Farming</p>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="varieties.html" class="nav-link">Varieties</a>
+        <a href="community.html" class="nav-link">Community</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/2349030376207" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner fade-in">
+        <div class="hero-text">
+          <h2>Transforming Agriculture, Empowering Youths, Building a Sustainable Future</h2>
+          <p>RH Integrated Farm supplies fresh cassava root tubers to food &amp; beverage processors, starch &amp; animal feed industries, and local processors across Northern Nigeria and Africa.</p>
+          <div class="cta-row">
+            <a href="about.html" class="btn btn-primary">Learn More</a>
+            <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1200&q=80&auto=format&fit=crop" alt="Cassava field">
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="quick-stats container">
+      <div class="card fade-in">
+        <h3>All-season Farming</h3>
+        <p>Consistent productivity through climate resilient practices.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Community Partnerships</h3>
+        <p>Partnering with local farmers to increase market access.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Crop Diversity</h3>
+        <p>Cassava, rice, maize, yam and horticulture.</p>
+      </div>
+    </section>
+
+    <!-- Varieties -->
+    <section class="highlight container fade-in">
+      <h2>Improved Cassava Varieties</h2>
+      <p>We work with high-yielding and disease-resistant varieties:</p>
+      <ul class="var-list">
+        <li>TME 419</li>
+        <li>TMS 30572</li>
+        <li>TMS 98/0505</li>
+        <li>TMS 97/2205</li>
+        <li>TMS 01/1368</li>
+        <li>TMS 01/1371</li>
+        <li>TMS 92/0326</li>
+        <li>TMS 96/1089A</li>
+        <li>TMS 96/1414</li>
+        <li>TMS 97/4763</li>
+      </ul>
+      <p class="muted">These varieties are selected for high starch, disease resistance and adaptability.</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery container fade-in">
+      <h2>Gallery</h2>
+      <div class="grid">
+        <img src="IMG-20250819-WA0031.jpg" alt="farm 1">
+        <img src="IMG-20250819-WA0025.jpg" alt="farm 2">
+        <img src="IMG-20250819-WA0015.jpg" alt="farm 3">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <h3>RH Integrated Farm</h3>
+        <p>Located in Wukari LGA, Taraba State. Join us to transform the cassava industry and empower communities.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: rhintegrated7@gmail.com</p>
+        <p>Phone: 09030376207 / 09154880185 / 08025770150</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/rimamnuskep-haggai" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/RIMAMNUSKEPHAG1?t=6pblNFQprtRqPbCclS3hIA&s=09" target="_blank" rel="noopener">X</a>
+          <a href="https://www.facebook.com/profile.php?id=61554749822752" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/haggairimamnuskep?igsh=aWZycm8wMHpxeDU5" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2025 RH Integrated Farm</div>
+  </footer>
+</body>
+</html>
